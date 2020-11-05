@@ -2,7 +2,7 @@
 $year=2020;
 $month=1;
 
-if($month=1;$month<13;$month++){
+for($month=1;$month<13;$month++){
 
 if(!empty($_GET['month'])<13){
      
