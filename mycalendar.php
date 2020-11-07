@@ -8,17 +8,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Permanent+Marker&display=swap');
-table{
+* {
   font-family: 'Noto Sans TC', sans-serif;
   font-family: 'Permanent Marker', cursive;
-  width:750px;
+
+}
+
+table{
+  width:1024px;
   margin:auto;
   border:1px solid #ccc;
 }
 table tr td{
   border:1px solid #ccc;
   text-align:center;
-  padding:10px;
+  padding:15px;
 }
 
 
@@ -36,78 +40,72 @@ tr td:hover {
 tr>td:first-child,tr>td:last-child{
         color:red;
 }
+
+
+
 </style>
 </head>
 
 <body>
 
-<h3 style="text-align:center">萬年曆</h3>
-
-
+<h1 style="text-align:center">Der Kalender</h1>
 <?php
-$thisYear=date("Y");
-$thisMonth=date("m");
-// echo "這個月：".$thisMonth."月";
-// echo "<br>";
-$monthDays=date("t");
-// echo "此月天數：".$monthDays."天";
-// echo "<br>";
-$firstDate=strtotime(date('Y-m-').'1');
+if(!isset($_GET['month'])){
+      $thisMonth=date("m");
+}else{
+      $thisMonth= $_GET['month'];
+}
+
+if(!isset($_GET['year'])){
+      $thisYear=date("Y");
+}else{
+      $thisYear= $_GET["year"];
+}
+
+// 站在下個月的角度去思考
+if(($thisMonth+1)>=13){
+ $nextMonth=1;
+  $nextYear=$thisYear+1;
+}else{
+   $nextMonth=$thisMonth+1;
+  $nextYear=$thisYear;
+}
+
+// 站在上個月的角度去思考
+if(($thisMonth-1)<=0){
+   $lastMonth=12;
+   $lastYear=$thisYear-1;
+}else{
+   $lastMonth=$thisMonth-1;
+   $lastYear=$thisYear;
+}
+
+
+$firstDate=strtotime("$thisYear-$thisMonth",'1');
+$monthDays=date("t",$firstDate);
 $startDayWeek=date('w',$firstDate);
-// echo "第一天星期：";
-// switch ($startDayWeek){
-//   case '0':echo"日";break;
-//   case '1':echo"一";break;
-//   case '2':echo "二";break;
-//   case '3':echo "三";break;
-//   case '4':echo"四";break;
-//   case '5':echo"五";break;
-//   case '6':echo "六";break;
-// }
-
-if(isset($_GET['thisMonth'])){
-
-  for($thisMonth=1;$thisMonth<13;$thisMonth++){
-
-    if($thisMonth>1 && $thisMonth<12){
-      $lastMonth=$thisMonth-1;
-      $nextMonth=$thisMonth+1;
-    }else if($thisMonth==1){
-
-        $lastYear=$thisYear-1;
-        $lastMonth=12;
-
-      }else if($thisMonth==12){
-        $nextYear=$thisYear+1;
-        $nextMonth=1;
-      }
-
-      echo <a href='mycalendar.php?thisMonth=<?$_GET['lastMonth'];?>'>上個月</a>;
-      echo <a href='mycalendar.php?thisMonth=<?$_GET['nextMonth'];?>'>下個月</a>;
-    }
-
-
-  }
-
+$year
 ?>
 
-
-
 <div style="text-align:center">
+<a href="?year=<?=$lastYear;?>&month=<?=$lastMonth;?>">Letzter monat</a>
+<span><?=$thisMonth;?>-<?=$thisYear;?></span>
+<a href="?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">Nächster Monat</a>
+</div>
+
+
+
 <table>
 <tr>
   <td>Sonntag</td>
   <td>Montag</td>
   <td>Dienstag</td>
   <td>Mittwoch</td>
-
   <td>Donnerstag</td>
   <td>Freitag</td>
   <td>Samstag</td>
 </tr>
-
 <?php
-
 for($i=0;$i<6;$i++){
   echo "<tr>";
   for($j=0;$j<7;$j++){
@@ -122,18 +120,11 @@ for($i=0;$i<6;$i++){
   }
 }
 
-
 ?>
 </table>
-</div>
 
 
 
-
-
-
-
-
-
+	
 </body>
 </html>
