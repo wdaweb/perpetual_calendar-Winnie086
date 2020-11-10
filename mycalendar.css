@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Permanent+Marker&display=swap');
+
+.container{
+  z-index:1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-family:'Permanent Marker','Noto Sans TC';
+  width: 1024px;
+  height: 768px;
+}
+
+.header {
+  background:black;
+  color:white;
+  width: 100%;
+  height: 192px;
+}
+
+.left {
+  width: 497px;
+  height: 576px;
+  background:yellow;
+  color:black;
+  font-size:1rem;
+}
+
+.right {
+  width: 497px;
+  height: 576px;
+  background:red;
+}
+
+
+
+table{
+  width:512px;
+  margin:auto;
+  /* border:1px solid #ccc; */
+}
+table tr td{
+  /* border:1px solid #ccc; */
+  text-align:center;
+  padding:10px;
+}
+
+
+tr td:hover {
+  background-color: white;
+}
+
+.title{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  text-align:center;
+  font-size:3rem;
+}
+
+tr>td:first-child,tr>td:last-child{
+        color:red;
+}
+
+.bb{  z-index:2;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      height: 100vh;
+    }
+    .bg{
+      display:block;
+      position: relative;
+      width:100vw;
+      height:100vh;
+    }
+    
+
+    .layer1 {
+      width: 2000px;
+      height: 2000px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer1 1s infinite;
+    }
+
+    .layer2 {
+      width: 1960px;
+      height: 1960px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer2 1s infinite;
+    }
+    .layer3 {
+      width: 1920px;
+      height: 1920px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer3 1s infinite;
+    }
+    .layer4 {
+      width: 1880px;
+      height: 1880px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer4 1s infinite;
+    }
+    .layer5 {
+      width: 1840px;
+      height: 1840px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer5 1s infinite;
+    }
+    .layer6 {
+      width: 1800px;
+      height: 1800px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer6 1s infinite;
+    }
+    .layer7 {
+      width: 1760px;
+      height: 1760px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer7 1s infinite;
+    }
+    .layer8 {
+      width: 1720px;
+      height: 1720px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer8 1s infinite;
+    }
+    .layer9 {
+      width: 1680px;
+      height: 1680px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer9 1s infinite;
+    }
+    .layer10 {
+      width: 1640px;
+      height: 1640px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer10 1s infinite;
+    }
+    .layer11 {
+      width: 1600px;
+      height: 1600px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer11 1s infinite;
+    }
+    .layer12 {
+      width: 1560px;
+      height: 1560px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer12 1s infinite;
+    }
+    .layer13 {
+      width: 1520px;
+      height: 1520px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer13 1s infinite;
+    }
+    .layer14 {
+      width: 1480px;
+      height: 1480px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer15 {
+      width: 1440px;
+      height: 1440px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer16 {
+      width: 1400px;
+      height: 1400px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer17 {
+      width: 1360px;
+      height: 1360px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer18 {
+      width: 1320px;
+      height: 1320px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer19 {
+      width: 1280px;
+      height: 1280px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer20 {
+      width: 1240px;
+      height: 1240px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer21 {
+      width: 1200px;
+      height: 1200px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer22 {
+      width: 1160px;
+      height: 1160px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer23 {
+      width: 1120px;
+      height: 1120px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer24 {
+      width: 1080px;
+      height: 1080px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer25 {
+      width: 1040px;
+      height: 1040px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer26 {
+      width: 1000px;
+      height: 1000px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer27 {
+      width: 960px;
+      height: 960px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer28 {
+      width: 920px;
+      height: 920px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    .layer29 {
+      text-align:center;
+      width: 880px;
+      height: 880px;
+      background:black;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer15 1s infinite;
+    }
+    .layer30 {
+      width: 840px;
+      height: 840px;
+      background:white;
+      border-radius:50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation: layer14 1s infinite;
+    }
+    @keyframes layer1{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer3{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer5{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer7{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer9{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer11{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer13{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer15{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer17{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer19{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer21{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer23{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer25{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer27{
+      from{background:white;}
+      to{background:black;}
+    }
+    @keyframes layer29{
+      from{background:white;}
+      to{background:black;}
+    }
+
+    @keyframes layer2{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer4{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer6{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer8{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer10{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer12{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer14{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer16{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer18{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer20{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer22{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer24{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer26{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer28{
+      from{background:black;}
+      to{background:white;}
+    }
+    @keyframes layer30{
+      from{background:black;}
+      to{background:white;}
+    }
