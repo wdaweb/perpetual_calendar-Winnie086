@@ -20,6 +20,12 @@
   height: 192px;
 }
 
+.header:hover {
+  transform: scale(1.5);
+  opacity: 0.9;
+  /* background-color: white; */
+}
+
 .left {
   width: 497px;
   height: 576px;
@@ -32,24 +38,27 @@
   width: 497px;
   height: 576px;
   background:red;
+ 
 }
-
 
 
 table{
   width:512px;
   margin:auto;
-  /* border:1px solid #ccc; */
 }
 table tr td{
-  /* border:1px solid #ccc; */
   text-align:center;
   padding:10px;
 }
 
 
 tr td:hover {
-  background-color: white;
+  /* background-image: url('https://e7.pngegg.com/pngimages/630/356/png-clipart-blue-and-green-earth-illustration-earth-drawing-cartoon-sketch-planet-cartoon-pencil-globe.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center; */
+  transform: scale(2.5);
+  opacity: 0.7;
 }
 
 .title{
@@ -63,6 +72,11 @@ tr>td:first-child,tr>td:last-child{
         color:red;
 }
 
+.black{
+  color:black;
+  opacity: 0.6;
+}
+
 .bb{  z-index:2;
       display: flex;
       justify-content:center;
@@ -71,18 +85,17 @@ tr>td:first-child,tr>td:last-child{
     }
     .bg{
       display:block;
-      position: relative;
+      position: fixed;
       width:100vw;
       height:100vh;
     }
-    
 
     .layer1 {
       width: 2000px;
       height: 2000px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position:fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -94,7 +107,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1960px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -105,7 +118,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1920px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -116,7 +129,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1880px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -127,7 +140,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1840px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -138,7 +151,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1800px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -149,7 +162,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1760px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -160,7 +173,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1720px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -171,7 +184,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1680px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -182,7 +195,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1640px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -193,7 +206,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1600px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -204,7 +217,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1560px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -215,7 +228,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1520px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -226,7 +239,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1480px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -237,7 +250,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1440px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -248,7 +261,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1400px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -259,7 +272,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1360px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -270,7 +283,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1320px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -281,7 +294,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1280px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -292,7 +305,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1240px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -303,7 +316,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1200px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -314,7 +327,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1160px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -325,7 +338,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1120px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -336,7 +349,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1080px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -347,7 +360,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1040px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -358,7 +371,7 @@ tr>td:first-child,tr>td:last-child{
       height: 1000px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -369,7 +382,7 @@ tr>td:first-child,tr>td:last-child{
       height: 960px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -380,7 +393,7 @@ tr>td:first-child,tr>td:last-child{
       height: 920px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -392,7 +405,7 @@ tr>td:first-child,tr>td:last-child{
       height: 880px;
       background:black;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
@@ -403,7 +416,7 @@ tr>td:first-child,tr>td:last-child{
       height: 840px;
       background:white;
       border-radius:50%;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);

@@ -16,11 +16,11 @@
 
 <div class="container p-0">
 
-<div class="header col-12 justify-content-center align-items-center d-flex"><h1 class="display-2">Der Kalender</h1></div>
+<div class="header col-12 justify-content-center align-items-center d-flex shadow rounded"><h1 class="display-1">Der Kalender</h1></div>
 
 
 <div class="row m-0">
-<div class="left col-6">
+<div class="left col-6 justify-content-center shadow rounded">
 <?php
 if(!isset($_GET['month'])){
       $thisMonth=date("m");
@@ -76,6 +76,7 @@ $year
   <td>Sa,</td>
 </tr>
 <?php
+
 for($i=0;$i<6;$i++){
   echo "<tr>";
   for($j=0;$j<7;$j++){
@@ -107,8 +108,112 @@ for($i=0;$i<6;$i++){
 
 
 
-<div class="right col-6">
-<img src="https://obs.line-scdn.net/0hDNXEyGyNG2FlPDCNJ_1kNl9qGA5WUAhiAQpKYiZSRVUdBQ8yDlJTVElpTQFMClw_CwpXBUE6AFAYXloxXlNT/w644" width="490" height="490" class="figure-img rounded" alt="Ill">
+<div class="right col-6 shadow rounded">
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+  </ol>
+
+  <div class="carousel-inner">
+
+   <div class="carousel-item btn btn-dark active">
+   <img src="https://image.shutterstock.com/image-vector/capricorn-sign-zodiac-artistic-color-600w-1674118798.jpg" class="d-block w-100 shadow rounded" alt="Der Steinbock" width="500" height="520">
+   <h1 class="display-5 carousel-caption black">Der Steinbock</h1>
+   <div class="display-5">21.12-20.01</div> 
+   </div>
+
+    <div class="carousel-item btn btn-dark">
+    <img src="https://image.shutterstock.com/image-vector/aquarius-sign-zodiac-artistic-color-600w-1674125167.jpg" class="d-block w-100 shadow rounded" alt="Der Wassermann" width="500" height="520">
+    <h1 class="display-5 carousel-caption black">Der Wassermann</h1>
+    <div class="display-5">21.01-19.02</div> 
+    </div>
+    
+    <div class="carousel-item btn btn-dark">
+     <img src="https://image.shutterstock.com/image-vector/pisces-sign-zodiac-artistic-color-600w-1674132709.jpg" class="d-block w-100  shadow rounded" alt="Die Fische" width="500" height="520">
+    <h1 class="display-5 carousel-caption black">Die Fische</h1>
+    <div class="display-5">20.02-20.03</div> 
+    </div>
+
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/aries-sign-zodiac-artistic-color-600w-1673935615.jpg" class="d-block w-100 shadow rounded" alt="Der Widder" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Der Widder</h1>
+      <div class="display-5">21.03-19.04</div> 
+    </div>
+
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/taurus-sign-zodiac-artistic-color-600w-1673935765.jpg" class="d-block w-100 shadow rounded" alt="Der Stier" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Der Stier</h1>
+      <div class="display-5">20.04-20.05</div> 
+    </div>
+
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/gemini-sign-zodiac-artistic-color-600w-1673990944.jpg" class="d-block w-100 shadow rounded" alt="Die Zwillinge" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Die Zwillinge</h1>
+      <div class="display-5">21.05-21.06</div> 
+    </div>
+   
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/cancer-sign-zodiac-artistic-color-600w-1674051217.jpg" class="d-block w-100 shadow rounded" alt="Der Krebs" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Der Krebs</h1>
+      <div class="display-5">22.06-22.07</div> 
+    </div>
+    
+
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/leo-sign-zodiac-artistic-color-600w-1674028624.jpg" class="d-block w-100 shadow rounded" alt="Der Löwe" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Der Löwe</h1>
+      <div class="display-5">23.07-22.08</div> 
+    </div>
+
+    <div class="carousel-item btn btn-dark btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/virgo-sign-zodiac-artistic-color-600w-1674067552.jpg" class="d-block w-100 shadow rounded" alt="Die Jungfrau" width="500" height="520">
+      <h1 class="display-5 carousel-caption black carousel-caption black">Die Jungfrau</h1>
+      <div class="display-5">23.08-22.09</div> 
+    </div>
+  
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/libra-sign-zodiac-artistic-color-600w-1674091282.jpg" class="d-block w-100 shadow rounded" alt="Die Waage" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Die Waage</h1>
+      <div class="display-5">23.09-23.10</div> 
+    </div>
+
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/scorpio-sign-zodiac-artistic-color-600w-1674101791.jpg" class="d-block w-100 shadow rounded" alt="Der Skorpion" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Der Skorpion</h1>
+      <div class="display-5">24.10-21.11</div> 
+    </div>
+
+    <div class="carousel-item btn btn-dark">
+      <img src="https://image.shutterstock.com/image-vector/sagittarius-sign-zodiac-artistic-color-600w-1674110653.jpg" class="d-block w-100 shadow rounded" alt="Der Schütze" width="500" height="520">
+      <h1 class="display-5 carousel-caption black">Der Schütze</h1>
+      <div class="display-5">22.11-20.12</div> 
+    </div>
+ 
+  </div>
+  
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon btn btn-danger btn-lg active"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon btn btn-danger btn-lg active"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+</div>
+
 
 <!--div right的 -->
 </div>
@@ -123,6 +228,7 @@ for($i=0;$i<6;$i++){
 
 <!-- 背景動畫 -->
 <div class="bb">
+    
     <div class="layer1"></div>
     <div class="layer2"></div>
     <div class="layer3"></div>
@@ -151,7 +257,7 @@ for($i=0;$i<6;$i++){
     <div class="layer26"></div>
     <div class="layer27"></div>
     <div class="layer28"></div>
-    <div class="layer29">唯有當你注意到我，我才有意義</div>
+    <div class="layer29"></div>
     <div class="layer30"></div>
   </div>
 
@@ -163,5 +269,3 @@ for($i=0;$i<6;$i++){
 
 </body>
 </html>
-
-11.11.20 00.14 _v3
