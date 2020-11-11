@@ -151,7 +151,7 @@ for($i=0;$i<6;$i++){
     <div class="layer26"></div>
     <div class="layer27"></div>
     <div class="layer28"></div>
-    <div class="layer29">唯有當你注意到我，我才有意義</div>
+    <div class="layer29"></div>
     <div class="layer30"></div>
   </div>
 
@@ -164,4 +164,4 @@ for($i=0;$i<6;$i++){
 </body>
 </html>
 
-11.11.20 16.17 _v4
+11.11.20 16.22 _v4
