@@ -127,7 +127,6 @@ for($i=0;$i<6;$i++){
 </div>
 
 
-
 <div class="right col-6 shadow rounded">
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -248,7 +247,6 @@ for($i=0;$i<6;$i++){
 
 <!-- 背景動畫 -->
 <div class="bb">
-    
     <div class="layer1"></div>
     <div class="layer2"></div>
     <div class="layer3"></div>
@@ -281,13 +279,7 @@ for($i=0;$i<6;$i++){
     <div class="layer30"></div>
   </div>
 
-
-
-
-
-
-
 </body>
 </html>
 
-14.11.20 13.39 _v5
+14.11.20 13.43 _v5
