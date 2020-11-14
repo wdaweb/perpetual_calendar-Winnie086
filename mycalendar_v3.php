@@ -9,6 +9,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="mycalendar.css">
 <script src="https://kit.fontawesome.com/4233378c09.js"></script>
+<link rel="icon" href="image/tag.ico" type="image/x-icon">
+<link rel="shortcut icon" href="mage/tag.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -63,6 +66,15 @@ $year
 <h1 class='justify-content-center d-flex m-auto display-4'><?=$thisMonth;?>-<?=$thisYear;?></h1>
 
 <!-- 顯示此年、此月的 -->
+</div>
+
+<!-- 查詢年月的 -->
+<div class="container-fluid m-0">
+    <form class="d-flex justify-content-center align-items-center" action="mycalendar_v3.php" method="$_GET">
+      <div class="col-4 ml-4"><input type="number" name="year" placeholder="Jahre" min="0" required></div>
+      <div class="col-4 mb-12"><input type="number" name="month" placeholder="Monat" min="1" max="12" required></div>
+      <div class="col-4 mr-4"><input type="submit" class="btn btn-dark " value="suchen"></div>
+    </form>
 </div>
 
 <table>
