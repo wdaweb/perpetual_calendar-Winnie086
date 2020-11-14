@@ -62,20 +62,28 @@ $startDayWeek=date('w',$firstDate);
 $year
 ?>
 
-<div class='justify-content-center d-flex m-auto'style="width:512px">
+<div class='justify-content-center d-flex m-auto'>
 <h1 class='justify-content-center d-flex m-auto display-4'><?=$thisMonth;?>-<?=$thisYear;?></h1>
 
 <!-- 顯示此年、此月的 -->
 </div>
 
 <!-- 查詢年月的 -->
-<div class="container-fluid m-0">
+<div class="row">
     <form class="d-flex justify-content-center align-items-center" action="mycalendar_v3.php" method="$_GET">
-      <div class="col-4 ml-4"><input type="number" name="year" placeholder="Jahre" min="0" required></div>
-      <div class="col-4 mb-12"><input type="number" name="month" placeholder="Monat" min="1" max="12" required></div>
-      <div class="col-4 mr-4"><input type="submit" class="btn btn-dark " value="suchen"></div>
+      <div class="col-4"><input type="number" name="month" style="width:100%" class="btn btn-dark" placeholder="Monat" min="1" max="12" required></div>
+    <div class="col-4"><input type="number" name="year" style="width:100%" class="btn btn-dark" placeholder="Jahre" min="0" required></div>
+    <div class="col-4"><input type="submit" style="width:100%" class="btn btn-dark" value="suchen"></div>
     </form>
 </div>
+
+<!-- 查詢年月的 -->
+    <!-- <form class="d-flex form-row justify-content-center align-items-center" action="mycalendar_v3.php" method="$_GET">
+        <input type="number col-2 w-10" name="year" placeholder="Jahre" min="0" required>
+        <input type="number col-2" name="month" placeholder="Monat" min="1" max="12" required>
+        <input type="submit col-2" class="btn btn-dark " value="suchen">
+    </form> -->
+
 
 <table>
 <tr>
