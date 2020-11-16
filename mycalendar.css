@@ -49,16 +49,21 @@ table{
 table tr td{
   text-align:center;
   padding:10px;
+  position: relative;
+  z-index:1;
 }
-
 
 tr td:hover {
   /* background-image: url('https://e7.pngegg.com/pngimages/630/356/png-clipart-blue-and-green-earth-illustration-earth-drawing-cartoon-sketch-planet-cartoon-pencil-globe.png');
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center; */
+  /*原本直接作用在td格子時，因為td格子被放大兩倍半，結果蓋掉周園八個格子，造成滑鼠移到周圍格子時沒有放大的效果　mack*/
+  /*透過設定z-index的垂直層疊關係，讓格子在被放大時，層疊階級低於其他格子，就不會造成周圍格子被蓋住而沒有hover的效果  mack*/
   transform: scale(2.5);
   opacity: 0.7;
+  position: relative;
+  z-index:0;
 }
 
 .title{
@@ -76,6 +81,8 @@ tr>td:first-child,tr>td:last-child{
   color:black;
   opacity: 0.6;
 }
+
+/*css的取名儘量使用有意義的單字
 
 .bb{  z-index:2;
       display: flex;
@@ -542,4 +549,4 @@ tr>td:first-child,tr>td:last-child{
     @keyframes layer30{
       from{background:black;}
       to{background:white;}
-    }
+    } */

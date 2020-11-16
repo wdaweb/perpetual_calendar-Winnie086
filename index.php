@@ -88,7 +88,9 @@ for($i=0;$i<6;$i++){
     }else{
       echo ($i*7)+($j+1)-$startDayWeek;
     }
+    echo "</td>"; //td需要有結束的標籤  mack
   }
+  echo "</tr>"; //tr需要有結束的檢籤  mack
 }
 
 ?>
@@ -227,7 +229,8 @@ for($i=0;$i<6;$i++){
 
 
 <!-- 背景動畫 -->
-<div class="bb">
+<!-- 不要套用這種過渡閃爍的動畫效果，視覺上很傷眼之外，也會造成瀏灠器的效能低落 -->
+<!-- <div class="bb">
     
     <div class="layer1"></div>
     <div class="layer2"></div>
@@ -267,7 +270,7 @@ for($i=0;$i<6;$i++){
 
 
 
-</body>
+</body> -->
 </html>
 
-11.11.20 16.34 _v4
+<!-- 11.11.20 16.34 _v4 -->
