@@ -15,7 +15,7 @@
 
 .header {
   background:black;
-  color:white;
+  color:#eee;
   width: 100%;
   height: 192px;
 }
@@ -49,16 +49,26 @@ table{
 table tr td{
   text-align:center;
   padding:10px;
+  position: relative;
+  z-index:1;
 }
 
+#winnieSlider .carousel-indicators li{
+  border-radius: 50%;
+  height:1em;
+}
 
 tr td:hover {
   /* background-image: url('https://e7.pngegg.com/pngimages/630/356/png-clipart-blue-and-green-earth-illustration-earth-drawing-cartoon-sketch-planet-cartoon-pencil-globe.png');
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center; */
+  /*原本直接作用在td格子時，因為td格子被放大兩倍半，結果蓋掉周園八個格子，造成滑鼠移到周圍格子時沒有放大的效果　mack*/
+  /*透過設定z-index的垂直層疊關係，讓格子在被放大時，層疊階級低於其他格子，就不會造成周圍格子被蓋住而沒有hover的效果  mack*/
   transform: scale(2.5);
   opacity: 0.7;
+  position: relative;
+  z-index:0;
 }
 
 .title{
@@ -77,469 +87,73 @@ tr>td:first-child,tr>td:last-child{
   opacity: 0.6;
 }
 
-.bb{  z-index:2;
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      height: 100vh;
-    }
-    .bg{
-      display:block;
-      position: fixed;
-      width:100vw;
-      height:100vh;
-    }
+/* 波浪 */
+.wave-container {
+  position:fixed;
+  background:url("https://eska.com/wp-content/uploads/2019/09/eska-mono-black-voor.jpg"),
+  linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(254,0,0,1) 61%, rgba(255,255,0,1) 100%);
+  background-blend-mode:screen,multiply;
+  width: 800x;
+  height: 800px;
+  margin: 0 auto;
+}
 
-    .layer1 {
-      width: 2000px;
-      height: 2000px;
-      background:black;
-      border-radius:50%;
-      position:fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer1 1s infinite;
-    }
+.wave {
+  position: absolute;
+  bottom: 60%;
+  width: 1000px;
+  height: 500px;
+}
 
-    .layer2 {
-      width: 1960px;
-      height: 1960px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer2 1s infinite;
-    }
-    .layer3 {
-      width: 1920px;
-      height: 1920px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer3 1s infinite;
-    }
-    .layer4 {
-      width: 1880px;
-      height: 1880px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer4 1s infinite;
-    }
-    .layer5 {
-      width: 1840px;
-      height: 1840px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer5 1s infinite;
-    }
-    .layer6 {
-      width: 1800px;
-      height: 1800px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer6 1s infinite;
-    }
-    .layer7 {
-      width: 1760px;
-      height: 1760px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer7 1s infinite;
-    }
-    .layer8 {
-      width: 1720px;
-      height: 1720px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer8 1s infinite;
-    }
-    .layer9 {
-      width: 1680px;
-      height: 1680px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer9 1s infinite;
-    }
-    .layer10 {
-      width: 1640px;
-      height: 1640px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer10 1s infinite;
-    }
-    .layer11 {
-      width: 1600px;
-      height: 1600px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer11 1s infinite;
-    }
-    .layer12 {
-      width: 1560px;
-      height: 1560px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer12 1s infinite;
-    }
-    .layer13 {
-      width: 1520px;
-      height: 1520px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer13 1s infinite;
-    }
-    .layer14 {
-      width: 1480px;
-      height: 1480px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer15 {
-      width: 1440px;
-      height: 1440px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer16 {
-      width: 1400px;
-      height: 1400px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer17 {
-      width: 1360px;
-      height: 1360px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer18 {
-      width: 1320px;
-      height: 1320px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer19 {
-      width: 1280px;
-      height: 1280px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer20 {
-      width: 1240px;
-      height: 1240px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer21 {
-      width: 1200px;
-      height: 1200px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer22 {
-      width: 1160px;
-      height: 1160px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer23 {
-      width: 1120px;
-      height: 1120px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer24 {
-      width: 1080px;
-      height: 1080px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer25 {
-      width: 1040px;
-      height: 1040px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer26 {
-      width: 1000px;
-      height: 1000px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer27 {
-      width: 960px;
-      height: 960px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer28 {
-      width: 920px;
-      height: 920px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    .layer29 {
-      text-align:center;
-      width: 880px;
-      height: 880px;
-      background:black;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer15 1s infinite;
-    }
-    .layer30 {
-      width: 840px;
-      height: 840px;
-      background:white;
-      border-radius:50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: layer14 1s infinite;
-    }
-    @keyframes layer1{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer3{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer5{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer7{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer9{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer11{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer13{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer15{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer17{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer19{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer21{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer23{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer25{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer27{
-      from{background:white;}
-      to{background:black;}
-    }
-    @keyframes layer29{
-      from{background:white;}
-      to{background:black;}
-    }
+.wave::before {
+  content: "";
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 25%;
+  position: absolute;
+  left: -10%;
+  bottom: 30%;
+  bottom:50%;
+  left:50%;
+  width: 1500px;
+  height: 1500px;
+  -webkit-animation: spin 8s linear infinite;
+  -moz-animation: spin 8s linear infinite;
+  animation: spin 8s linear infinite;
+}
 
-    @keyframes layer2{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer4{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer6{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer8{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer10{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer12{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer14{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer16{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer18{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer20{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer22{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer24{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer26{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer28{
-      from{background:black;}
-      to{background:white;}
-    }
-    @keyframes layer30{
-      from{background:black;}
-      to{background:white;}
-    }
+.wave::after {
+  content: "";
+  background-color: #fff;
+  opacity: 0.3;
+  border-radius: 35%;
+  position: absolute;
+  left: -10%;
+  bottom: 30%;
+  top:50%;
+  right:50%;
+  width: 1500px;
+  height: 1500px;
+  -webkit-animation: spin 10s linear infinite;
+  -moz-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

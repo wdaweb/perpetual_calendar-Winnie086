@@ -8,10 +8,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="mycalendar.css">
+<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 <script src="https://kit.fontawesome.com/4233378c09.js"></script>
-<link rel="icon" href="image/tag.ico" type="image/x-icon">
-<link rel="shortcut icon" href="mage/tag.ico" type="image/x-icon">
-
 </head>
 
 <body>
@@ -62,7 +60,7 @@ $startDayWeek=date('w',$firstDate);
 $year
 ?>
 
-<div class='justify-content-center d-flex m-auto'>
+<div class='justify-content-center d-flex m-auto'style="width:512px">
 <h1 class='justify-content-center d-flex m-auto display-4'><?=$thisMonth;?>-<?=$thisYear;?></h1>
 
 <!-- 顯示此年、此月的 -->
@@ -70,20 +68,12 @@ $year
 
 <!-- 查詢年月的 -->
 <div class="row">
-    <form class="d-flex justify-content-center align-items-center" action="mycalendar_v3.php" method="$_GET">
+    <form class="d-flex justify-content-center align-items-center" action="?" method="$_GET">
       <div class="col-4"><input type="number" name="month" style="width:100%" class="btn btn-dark" placeholder="Monat" min="1" max="12" required></div>
     <div class="col-4"><input type="number" name="year" style="width:100%" class="btn btn-dark" placeholder="Jahre" min="0" required></div>
     <div class="col-4"><input type="submit" style="width:100%" class="btn btn-dark" value="suchen"></div>
     </form>
 </div>
-
-<!-- 查詢年月的 -->
-    <!-- <form class="d-flex form-row justify-content-center align-items-center" action="mycalendar_v3.php" method="$_GET">
-        <input type="number col-2 w-10" name="year" placeholder="Jahre" min="0" required>
-        <input type="number col-2" name="month" placeholder="Monat" min="1" max="12" required>
-        <input type="submit col-2" class="btn btn-dark " value="suchen">
-    </form> -->
-
 
 <table>
 <tr>
@@ -108,7 +98,9 @@ for($i=0;$i<6;$i++){
     }else{
       echo ($i*7)+($j+1)-$startDayWeek;
     }
+    echo "</td>"; //td需要有結束的標籤  mack
   }
+  echo "</tr>"; //tr需要有結束的檢籤  mack
 }
 
 ?>
@@ -116,8 +108,9 @@ for($i=0;$i<6;$i++){
 
 
 <div class='justify-content-around d-flex m-auto' style="width:512px">
-<a href="?year=<?=$lastYear;?>&month=<?=$lastMonth;?>" class="btn btn-dark btn-lg active"><i class="fas fa-angle-double-left"></i></a>
-<a href="?year=<?=$nextYear;?>&month=<?=$nextMonth;?>" class="btn btn-dark btn-lg active"><i class="fas fa-angle-double-right"></i></a>
+<a href="?year=<?=$lastYear;?>&month=<?=$lastMonth;?>" class="btn btn-dark btn-lg active"><i class="fas fa-angle-double-left fa-2x"></i></a>
+<a href="?year=<?=date("Y");?>&month=<?=date("m");?>" class="btn btn-dark btn-lg active">Jetzt</a>
+<a href="?year=<?=$nextYear;?>&month=<?=$nextMonth;?>" class="btn btn-dark btn-lg active"><i class="fas fa-angle-double-right fa-2x"></i></a>
 
 <!-- a href的 -->
 </div>
@@ -127,22 +120,23 @@ for($i=0;$i<6;$i++){
 </div>
 
 
+
 <div class="right col-6 shadow rounded">
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="winnieSlider" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+    <li data-target="#winnieSlider" data-slide-to="0" class="active"></li>
+    <li data-target="#winnieSlider" data-slide-to="1"></li>
+    <li data-target="#winnieSlider" data-slide-to="2"></li>
+    <li data-target="#winnieSlider" data-slide-to="3"></li>
+    <li data-target="#winnieSlider" data-slide-to="4"></li>
+    <li data-target="#winnieSlider" data-slide-to="5"></li>
+    <li data-target="#winnieSlider" data-slide-to="6"></li>
+    <li data-target="#winnieSlider" data-slide-to="7"></li>
+    <li data-target="#winnieSlider" data-slide-to="8"></li>
+    <li data-target="#winnieSlider" data-slide-to="9"></li>
+    <li data-target="#winnieSlider" data-slide-to="10"></li>
+    <li data-target="#winnieSlider" data-slide-to="11"></li>
   </ol>
 
   <div class="carousel-inner">
@@ -222,11 +216,11 @@ for($i=0;$i<6;$i++){
  
   </div>
   
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#winnieSlider" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon btn btn-danger btn-lg active"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#winnieSlider" role="button" data-slide="next">
     <span class="carousel-control-next-icon btn btn-danger btn-lg active"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -244,42 +238,20 @@ for($i=0;$i<6;$i++){
 <!-- div container的 -->
 </div>
 
+<!-- 波浪 -->
+<div class="row">
+<div class="wave-container col-12">
+  <div class="wave"></div>
+</div>
+</div>
 
-<!-- 背景動畫 -->
-<div class="bb">
-    <div class="layer1"></div>
-    <div class="layer2"></div>
-    <div class="layer3"></div>
-    <div class="layer4"></div>
-    <div class="layer5"></div>
-    <div class="layer6"></div>
-    <div class="layer7"></div>
-    <div class="layer8"></div>
-    <div class="layer9"></div>
-    <div class="layer10"></div>
-    <div class="layer11"></div>
-    <div class="layer12"></div>
-    <div class="layer13"></div>
-    <div class="layer14"></div>
-    <div class="layer15"></div>
-    <div class="layer16"></div>
-    <div class="layer17"></div>
-    <div class="layer18"></div>
-    <div class="layer19"></div>
-    <div class="layer20"></div>
-    <div class="layer21"></div>
-    <div class="layer22"></div>
-    <div class="layer23"></div>
-    <div class="layer24"></div>
-    <div class="layer25"></div>
-    <div class="layer26"></div>
-    <div class="layer27"></div>
-    <div class="layer28"></div>
-    <div class="layer29"></div>
-    <div class="layer30"></div>
-  </div>
+
+
+
+
+
 
 </body>
 </html>
 
-14.11.20 13.43 _v5
+<!-- 11.11.20 16.34 _v4 -->
